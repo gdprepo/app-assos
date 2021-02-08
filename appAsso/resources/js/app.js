@@ -5,6 +5,7 @@
  */
 
 require("./bootstrap");
+import "../css/app.css";
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -16,23 +17,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Components imports
-import Navbar from "./components/layout/Navbar";
+import Home from "./components/layout/Home";
 
 const App = () => {
     return (
-        <div className="container">
-            <Navbar />
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
-
-                        <div className="card-body">
-                            I'm an example component!
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="container-fluid" style={{ padding: "0" }}>
+            <Home />
         </div>
     );
 };

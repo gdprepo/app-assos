@@ -1,0 +1,41 @@
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #2e2f5e;
+}
+
+nav.navbar {
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    width: 100%;
+}
+
+nav.navbar button {
+  border: none;
+}
+
+.hero {
+    height: 800px;
+    background: url(/images/hero.jpg);
+    filter: contrast(50%);
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 2rem;
+}

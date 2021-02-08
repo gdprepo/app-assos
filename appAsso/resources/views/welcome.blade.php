@@ -7,6 +7,7 @@
     <title>Test</title>
 
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="app"></div>

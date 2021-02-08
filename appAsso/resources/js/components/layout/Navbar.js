@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 
 const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-black bg-black">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    WikAssoc
+        <nav className="navbar navbar-expand-lg navbar-black bg-black">
+            <div className="container-fluid d-flex justify-content-between">
+                <a className="navbar-brand" href="#">
+                    WikAsso
                 </a>
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
@@ -17,40 +17,52 @@ const Navbar = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
+                <div
+                    className="collapse navbar-collapse justify-content-end"
+                    id="navbarNav"
+                >
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
                             <a
-                                class="nav-link active"
+                                className="nav-link active"
                                 aria-current="page"
                                 href="#"
                             >
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">
                                 Features
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">
                                 Pricing
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link disabled"
-                                href="#"
-                                tabindex="-1"
-                                aria-disabled="true"
-                            >
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">
                                 Disabled
                             </a>
                         </li>
                     </ul>
+                    <form className="d-flex">
+                        <input
+                            className="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button
+                            className="btn btn-outline-success"
+                            type="submit"
+                        >
+                            <img src="/images/search-icon.svg" alt="Search" height="20px" fill="white" width="20px"/>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
