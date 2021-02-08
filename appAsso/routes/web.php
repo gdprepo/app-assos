@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('/dashboard/assosiations', 'DashboardController@assos')->name('dashboard.assos');
+
+Route::get('/dashboard/assosiations/{id}', 'DashboardController@assosDelete')->name('assos.delete');
+
+

@@ -20,7 +20,6 @@ class PostsSeeder extends Seeder
             'description' => Str::random(15),
             'eventdate' => new \DateTime(),
             'type' => "Simple",
-            'budget' => "1000",
             'image' => "https://via.placeholder.com/150",
             'assos_id' => "1",
             'visible' => true,
