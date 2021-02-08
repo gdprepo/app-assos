@@ -17,7 +17,7 @@ import ReactDOM from "react-dom";
 
 // Components imports
 import Navbar from "./components/layout/Navbar";
-
+    
 const App = () => {
     return (
         <div className="container">
@@ -28,7 +28,7 @@ const App = () => {
                         <div className="card-header">Example Component</div>
 
                         <div className="card-body">
-                            I'm an example component!
+                            OKOK
                         </div>
                     </div>
                 </div>

@@ -1883,7 +1883,7 @@ var App = function App() {
             children: "Example Component"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "card-body",
-            children: "I'm an example component!"
+            children: "OKOK"
           })]
         })
       })
