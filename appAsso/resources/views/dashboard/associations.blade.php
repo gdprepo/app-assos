@@ -13,13 +13,19 @@
     <div class="responsive-table">
         <table class="table">
             <thead>
+            <a href="{{ route('assos.add') }}">
+                <div style="float: right;" class="btn rounded-1 blue press">Creer</div>        
+            </a>
+
                 <tr>
                     <th>title</th>
                     <th>description</th>
                     <th>hashtags</th>
                     <th>logo</th>
                     <th>Action(s)</th>
-                    <th></th>
+                    <th>
+                    
+                    </th>
 
                 </tr>
             </thead>
@@ -35,7 +41,7 @@
                         null
                         @endif
                     </td>
-                    <td><img src="{{ $assos->logo }}" alt=""> </td>
+                    <td><img style="width: 100%;" src="{{ $assos->logo != 'https://via.placeholder.com/250' ? asset('uploads/assos/'.$assos->logo) : 'https://via.placeholder.com/150'  }}" alt=""> </td>
                     <td>
                         <div class="btn rounded-1 blue press">Modifier</div>
                     </td>

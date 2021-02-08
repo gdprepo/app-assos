@@ -10,6 +10,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -395,6 +396,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.1.0/dist/css/axentix.min.css">
 
 
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-tagsinput.css') }}">
 
     <style>
         body {
@@ -472,10 +474,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/js/axentix.min.js"></script>
+    <script src="{{ asset('/js/bootstrap-tagsinput.js') }}"></script>
     @yield('js-extra')
 
+
     <script>
-        var sidenav = new Sidenav('.example-sidenav');
+        // var sidenav = new Sidenav('.example-sidenav');
+
+        (function() {
+            // your page initialization code here
+            // the DOM will be available here
+            $("#hash").tagsinput('items')
+
+        })();
     </script>
 
 </body>
