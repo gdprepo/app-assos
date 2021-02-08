@@ -11,6 +11,13 @@
 </head>
 <body>
     <div id="app"></div>
-    <script src="/js/app.js"></script>
+
+    
+
+
+    <script src="/js/app.js">
+var variableRecuperee = <?php echo json_encode($associations); ?>;
+      
+    </script>
 </body>
 </html>

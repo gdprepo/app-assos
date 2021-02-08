@@ -5,7 +5,6 @@
  */
 
 require("./bootstrap");
-import "../css/app.css";
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -17,22 +16,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Components imports
-import Home from "./components/layout/Home";
+import Navbar from "./components/layout/Navbar";
 
 const style = {
     marginTop: 50,
 }
 
-const App = () => {
+const Nav = () => {
     return (
-        <div className="container-fluid" style={{ padding: "0" }}>
-            <Home />
+        <div>
+            <Navbar />
+
         </div>
     );
 };
 
-export default App;
+export default Nav;
 
 if (document.getElementById("app")) {
-    ReactDOM.render(<App />, document.getElementById("app"));
+    ReactDOM.render(<Nav />, document.getElementById("app"));
 }

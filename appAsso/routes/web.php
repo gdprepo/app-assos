@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,10 @@ Route::get('/dashboard/assosiations', 'DashboardController@assos')->name('dashbo
 
 Route::get('/dashboard/assosiations/{id}', 'DashboardController@assosDelete')->name('assos.delete');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
