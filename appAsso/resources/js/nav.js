@@ -22,27 +22,17 @@ const style = {
     marginTop: 50,
 }
 
-const App = () => {
+const Nav = () => {
     return (
         <div>
             <Navbar />
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">Example Component</div>
 
-                            <div className="card-body">OKOK</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };
 
-export default App;
+export default Nav;
 
 if (document.getElementById("app")) {
-    ReactDOM.render(<App />, document.getElementById("app"));
+    ReactDOM.render(<Nav />, document.getElementById("app"));
 }
