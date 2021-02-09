@@ -1870,6 +1870,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+var style = {
+  marginTop: 50
+};
 
 
 console.log(associations);

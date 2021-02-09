@@ -6,16 +6,14 @@
 
 <div class="container">
 
-    <h1>List des assosiations USER</h1>
+    <h1>Choisir une Association pour voir ses Posts</h1>
 
 
 
     <div class="responsive-table">
         <table class="table">
             <thead>
-            <a href="{{ route('assos.add') }}">
-                <div style="float: right;" class="btn rounded-1 blue press">Creer</div>        
-            </a>
+
 
                 <tr>
                     <th>title</th>
@@ -23,9 +21,6 @@
                     <th>hashtags</th>
                     <th>logo</th>
                     <th>Action(s)</th>
-                    <th>
-                    
-                    </th>
 
                 </tr>
             </thead>
@@ -41,16 +36,14 @@
                         null
                         @endif
                     </td>
-                    <td><img style="width: 100%;" src="{{ $assos->logo != 'https://via.placeholder.com/250' ? asset('uploads/assos/'.$assos->logo) : 'https://via.placeholder.com/150'  }}" alt=""> </td>
+                    <td><img style="width: 100%;" src="{{ $assos->image != 'https://via.placeholder.com/250' ? asset('uploads/assos/'.$assos->logo) : 'https://via.placeholder.com/150'  }}" alt=""> </td>
                     <td>
-                        <div class="btn rounded-1 blue press">Modifier</div>
+                        <a href="{{ route('post.list', $assos->id) }}">
+                        <div class="btn rounded-1 blue press">Selectionner</div>
+                        
+                        </a>
                     </td>
-                    <td>
-                        <form method="POST" action="{{ route('assos.delete', $assos->id) }}">
-                        @csrf
-                        <button type="submit" class="btn rounded-1 blue press">Supprimer</button>
-                        </form>
-                    </td>
+
                 </tr>
                 @endforeach
             </tbody>
