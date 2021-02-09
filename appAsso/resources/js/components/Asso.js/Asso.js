@@ -6,7 +6,7 @@ const Asso = ({ posts }) => {
     return (
         <div className="container asso-posts">
             <div className="list-group">
-                {postsState.map((post) => {
+                {posts.map((post) => {
                     if (id == post.assos_id) {
                         return (
                             <Link
