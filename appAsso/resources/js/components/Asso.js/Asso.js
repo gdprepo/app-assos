@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const Asso = ({ posts }) => {
     let { id } = useParams();
-
-    console.log(1, id);
-    console.log(2, posts);
-
     return (
         <div className="container asso-posts">
             <div className="list-group">
-                {posts.map((post) => {
+                {postsState.map((post) => {
                     if (id == post.assos_id) {
                         return (
                             <Link
@@ -21,7 +17,7 @@ const Asso = ({ posts }) => {
                             >
                                 <img
                                     src={post.image}
-                                    class="rounded float-start"
+                                    className="rounded float-start"
                                     alt="..."
                                 ></img>
                                 <div className="d-flex w-100 justify-content-between">
