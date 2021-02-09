@@ -15,14 +15,48 @@ class PostsSeeder extends Seeder
      */
     public function run()
     {
-        Post::create([
-            'title' => Str::random(10),
-            'description' => Str::random(15),
-            'eventdate' => new \DateTime(),
-            'type' => "Simple",
-            'image' => "https://via.placeholder.com/150",
-            'assos_id' => "1",
-            'visible' => true,
-        ]);
+
+        for ($i=0; $i < 3; $i++) { 
+            # code...
+
+            Post::create([
+                'title' => Str::random(10),
+                'description' => Str::random(15),
+                'eventdate' => new \DateTime(),
+                'type' => "Simple",
+                'image' => "https://via.placeholder.com/150",
+                'assos_id' => "1",
+                'visible' => true,
+            ]);
+        }
+
+        for ($i=0; $i < 3; $i++) { 
+            # code...
+
+            Post::create([
+                'title' => Str::random(10),
+                'description' => Str::random(15),
+                'eventdate' => new \DateTime(),
+                'type' => "Simple",
+                'image' => "https://via.placeholder.com/150",
+                'assos_id' => "2",
+                'visible' => true,
+            ]);
+        }
+
+        for ($i=0; $i < 3; $i++) { 
+            # code...
+
+            Post::create([
+                'title' => Str::random(10),
+                'description' => Str::random(15),
+                'eventdate' => new \DateTime(),
+                'type' => "Simple",
+                'image' => "https://via.placeholder.com/150",
+                'assos_id' => "3",
+                'visible' => true,
+            ]);
+        }
+
     }
 }

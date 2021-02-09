@@ -447,7 +447,7 @@
 
         <a href="{{ route('dashboard') }}" class="sidenav-link {{ (strpos(Route::currentRouteName(), 'dashboard') === 0) ? 'active' : '' }}">Dashboard</a>
         <a href="{{ route('dashboard.assos') }}" class="sidenav-link ">Association(s)</a>
-        <a href="{{ route('dashboard') }}" class="sidenav-link">Posts</a>
+        <a href="{{ route('assos.posts') }}" class="sidenav-link">Posts</a>
         <a href="{{ route('dashboard') }}" class="sidenav-link">Categories</a>
 
 
