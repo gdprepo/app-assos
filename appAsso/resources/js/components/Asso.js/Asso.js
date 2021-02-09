@@ -10,22 +10,32 @@ const Asso = ({ posts }) => {
                     if (id == post.assos_id) {
                         return (
                             <Link
-                                to={"/" + post.id}
                                 key={post.id}
                                 className="list-group-item list-group-item-action active mb-3"
                                 aria-current="true"
                             >
-                                <img
-                                    src={post.image}
-                                    className="rounded float-start"
-                                    alt="..."
-                                ></img>
-                                <div className="d-flex w-100 justify-content-between">
-                                    <h5 className="mb-1">{post.title}</h5>
-                                    <small>{post.created_at}</small>
+                                <div class="row no-gutters">
+                                    <div class="col-auto">
+                                        <img
+                                            src={post.image}
+                                            className="rounded float-start"
+                                            alt="..."
+                                        ></img>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-block px-2">
+                                            <h4 class="card-title">
+                                                {post.title}
+                                            </h4>
+                                            <small>{post.type}</small>
+                                            <small>{post.created_at}</small>
+                                            <p class="card-text">
+                                                {post.description}
+                                            </p>
+       
+                                        </div>
+                                    </div>
                                 </div>
-                                <p className="mb-1">{post.description}</p>
-                                <small>{post.type}</small>
                             </Link>
                         );
                     }
