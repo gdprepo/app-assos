@@ -17,6 +17,8 @@
     <script>
         // import "/js/app.js"
         const associations = <?php echo json_encode($associations); ?>;
+        const posts = <?php echo json_encode($posts); ?>;
+    
     </script>
     <script src="/js/app.js"></script>
 </body>
