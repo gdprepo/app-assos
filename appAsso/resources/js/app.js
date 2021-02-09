@@ -15,19 +15,30 @@ import "../css/app.css";
 
 import React, { createContext, useContext } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // Components imports
 import Home from "./components/layout/Home";
 import AssoList from "./components/AssoList/AssoList";
-
-console.log(associations);
+import Asso from "./components/Asso.js/Asso";
+import Navbar from "./components/layout/Navbar";
 
 const App = () => {
     return (
-        <div className="container-fluid" style={{ padding: "0" }}>
-            <Home />
-            <AssoList associations={associations} />
-        </div>
+        <Router>
+            <div className="container-fluid" style={{ padding: "0" }}>
+                <Switch>
+                    <Route path="/:id">
+                        <Navbar />
+                        <Asso posts={posts} />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                        <AssoList associations={associations} />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
     );
 };
 

@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-black bg-black">
             <div className="container-fluid d-flex justify-content-between">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                     <img src="/images/logo.png" alt="Logo WikAsso" />
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -25,28 +25,28 @@ const Navbar = () => {
                 >
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className="nav-link active"
                                 aria-current="page"
-                                href="#"
+                                to="/"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/">
                                 Features
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/">
                                 Pricing
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/">
                                 Disabled
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <form className="d-flex">
