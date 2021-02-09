@@ -13,20 +13,20 @@ import "../css/app.css";
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import React from "react";
+import React, { createContext, useContext } from "react";
 import ReactDOM from "react-dom";
 
 // Components imports
 import Home from "./components/layout/Home";
+import AssoList from "./components/AssoList/AssoList";
 
-const style = {
-    marginTop: 50,
-}
+console.log(associations);
 
 const App = () => {
     return (
         <div className="container-fluid" style={{ padding: "0" }}>
             <Home />
+            <AssoList associations={associations} />
         </div>
     );
 };

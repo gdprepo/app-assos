@@ -14,10 +14,10 @@
 
     
 
-
-    <script src="/js/app.js">
-var variableRecuperee = <?php echo json_encode($associations); ?>;
-      
+    <script>
+        // import "/js/app.js"
+        const associations = <?php echo json_encode($associations); ?>;
     </script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

@@ -12,8 +12,12 @@ nav.navbar {
     width: 100%;
 }
 
+nav.navbar img {
+    max-width: 200px;
+}
+
 nav.navbar button {
-  border: none;
+    border: none;
 }
 
 .hero {
@@ -21,7 +25,7 @@ nav.navbar button {
     background: url(/images/hero.jpg);
     filter: contrast(50%);
     top: 0px;
-    position: absolute;
+    position: relative;
     z-index: -1;
     background-size: cover;
     background-repeat: none;
@@ -33,9 +37,9 @@ nav.navbar button {
 }
 
 .hero h1 {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 .hero p {
-  font-size: 2rem;
+    font-size: 2rem;
 }

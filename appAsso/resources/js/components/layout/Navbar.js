@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-black bg-black">
             <div className="container-fluid d-flex justify-content-between">
                 <a className="navbar-brand" href="#">
-                    WikAsso
+                    <img src="/images/logo.png" alt="Logo WikAsso" />
                 </a>
                 <button
                     className="navbar-toggler"
@@ -60,7 +60,13 @@ const Navbar = () => {
                             className="btn btn-outline-success"
                             type="submit"
                         >
-                            <img src="/images/search-icon.svg" alt="Search" height="20px" fill="white" width="20px"/>
+                            <img
+                                src="/images/search-icon.svg"
+                                alt="Search"
+                                height="20px"
+                                fill="white"
+                                width="20px"
+                            />
                         </button>
                     </form>
                 </div>
