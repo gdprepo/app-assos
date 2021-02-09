@@ -22,7 +22,6 @@
                 <input name="hashtags" multiple="multiple" id="hash" type="text" placeholder="science, santé" />
             </div>
             <div class="form-field col-sm2">
-
                 <label for="textarea">Description</label>
                 <textarea name="description" id="textarea" class="form-control rounded-1" required></textarea>
             </div>

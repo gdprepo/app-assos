@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $associations = Assos::all();
@@ -28,8 +34,7 @@ class DashboardController extends Controller
 
     public function assosAdd()
     {
-        return view('dashboard.associationAdd', [
-        ]);
+        return view('dashboard.associationAdd', []);
     }
 
     public function assosStore(Request $request)
@@ -42,30 +47,26 @@ class DashboardController extends Controller
 
         // if ($request->input('hashtags') > 1) {
 
- 
+
         //         $res = implode(",", $request->input('hashtags'));
 
 
         //     $assos->hashtags = $res;
 
         // } else {
-            $assos->hashtags = json_encode($request->input('hashtags'));
+        $assos->hashtags = json_encode($request->input('hashtags'));
         // }
         if ($request->hasFile('image')) {
 
-                $file = $request->file('image');
-                $extension = $file->getClientOriginalName();
-                $filename = time() . '.' . $extension;
-                $file->move(public_path() . '/uploads/assos/', $filename);
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalName();
+            $filename = time() . '.' . $extension;
+            $file->move(public_path() . '/uploads/assos/', $filename);
 
 
-                $assos->logo = $filename;
-    
-
-
+            $assos->logo = $filename;
         } else {
-            $assos->logo= "";
-
+            $assos->logo = "";
         }
 
 
@@ -77,20 +78,16 @@ class DashboardController extends Controller
 
 
         return redirect()->route('dashboard.assos')->with('success', 'L association a bien été créée.');
-
-
     }
 
     public function assosDelete($id)
     {
         if ($association = Assos::find($id)) {
-            
-            $association->delete();
 
+            $association->delete();
         }
 
 
         return redirect()->route('dashboard.assos')->with('success', 'L association a bien été supprimé.');
     }
-
 }
