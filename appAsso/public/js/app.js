@@ -1993,6 +1993,7 @@ var App = function App() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
           path: "/:id",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_layout_Navbar__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Asso_js_Asso__WEBPACK_IMPORTED_MODULE_5__.default, {
+            associations: associations,
             posts: posts
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
@@ -2079,16 +2080,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Asso = function Asso(_ref) {
-  var posts = _ref.posts;
+  var associations = _ref.associations,
+      posts = _ref.posts;
 
   var _useParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useParams)(),
       id = _useParams.id;
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "container asso-posts",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "list-group",
-      children: posts.map(function (post) {
+      children: [associations.map(function (assos) {
+        if (id == assos.id) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          style: {
+            textAlign: "center",
+            margin: "50px 0"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            style: {
+              width: "200px"
+            },
+            src: assos.logo,
+            className: "rounded float-start",
+            alt: "..."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
+            style: {
+              marginTop: "30px"
+            },
+            children: ["Listes des poste de l'Association \" ", assos.title, " \""]
+          })]
+        });
+      }), posts.map(function (post) {
         if (id == post.assos_id) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
             className: "list-group-item list-group-item-action active mb-3",
@@ -2122,7 +2144,7 @@ var Asso = function Asso(_ref) {
             })
           }, post.id);
         }
-      })
+      })]
     })
   });
 };

@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const Asso = ({ posts }) => {
+const Asso = ({ associations, posts }) => {
     let { id } = useParams();
     return (
         <div className="container asso-posts">
             <div className="list-group">
+                {associations.map((assos) => {
+                    if (id == assos.id)
+                        return (
+                            <div style={{ textAlign: "center", margin: "50px 0" }}>
+                                <img
+                                    style={{ width: "200px" }}
+                                    src={assos.logo}
+                                    className="rounded float-start"
+                                    alt="..."
+                                ></img>
+                                <h2 style={{ marginTop: "30px" }}>Listes des poste de l'Association " {assos.title} "</h2>
+                            </div>
+                        );
+                })}
+
                 {posts.map((post) => {
                     if (id == post.assos_id) {
                         return (
@@ -32,7 +47,6 @@ const Asso = ({ posts }) => {
                                             <p class="card-text">
                                                 {post.description}
                                             </p>
-       
                                         </div>
                                     </div>
                                 </div>

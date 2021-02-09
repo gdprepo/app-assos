@@ -30,7 +30,7 @@ const App = () => {
                 <Switch>
                     <Route path="/:id">
                         <Navbar />
-                        <Asso posts={posts} />
+                        <Asso  associations={associations} posts={posts} />
                     </Route>
                     <Route path="/">
                         <Home />
